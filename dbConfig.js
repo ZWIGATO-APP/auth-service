@@ -1,11 +1,9 @@
 // db.js
 const mongoose = require('mongoose');
 
-const MONGO_URI = "mongodb://localhost:27017/Zwigato"; // Change this to your MongoDB connection string
-
 const connectDB = async () => {
     try {
-        await mongoose.connect(MONGO_URI, {
+        await mongoose.connect(process.env.MONGODB_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

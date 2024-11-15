@@ -10,7 +10,7 @@ describe('Auth Routes', () => {
         // Check if already connected
         if (mongoose.connection.readyState === 0) {
             // Connect to the database before running tests
-            await mongoose.connect('mongodb://localhost:27017/Zwigato-test', {
+            await mongoose.connect(process.env.MONGODB_URL, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             });
