@@ -5,6 +5,11 @@ const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const connectDB = require('./dbConfig.js');
+const dotenv = require('dotenv');
+
+// Determine which .env file to load
+const envFile = `.env.${process.env.NODE_ENV || 'dev'}`;
+dotenv.config({ path: envFile });
 
 const app = express();
 app.use(cors());

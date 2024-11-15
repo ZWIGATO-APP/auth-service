@@ -1,7 +1,7 @@
 // db.js
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://localhost:27017/Zwigato'; // Change this to your MongoDB connection string
+const MONGO_URI = "mongodb://localhost:27017/Zwigato"; // Change this to your MongoDB connection string
 
 const connectDB = async () => {
     try {
