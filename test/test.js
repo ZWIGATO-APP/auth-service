@@ -19,8 +19,9 @@ describe('Auth Routes', () => {
 
     after(async () => {
         // Drop the test database and close the connection after tests
-        await mongoose.connection.db.dropDatabase();
-        await mongoose.disconnect();
+        // await mongoose.connection.db.dropDatabase();
+        // await mongoose.disconnect();
+        await mongoose.connection.close();
     });
 
     describe('POST /auth/register', () => {
